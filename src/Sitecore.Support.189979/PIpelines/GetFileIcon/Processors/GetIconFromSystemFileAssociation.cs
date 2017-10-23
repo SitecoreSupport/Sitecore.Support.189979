@@ -22,7 +22,12 @@
                 }
                 if (!string.IsNullOrEmpty(shellFileIcon))
                 {
-                    args.RelativeIconPath = FileUtil.UnmapPath(shellFileIcon);
+                    #region Modified code
+
+                    args.RelativeIconPath = shellFileIcon;
+
+                    #endregion
+
                     args.AbortPipeline();
                 }
             }
